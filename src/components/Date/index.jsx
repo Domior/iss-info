@@ -1,8 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { getDate, getTime } from '../../utils/calculateTimestamp';
 
-const index = ({ timestamp }) => {
+const Date = () => {
+  const { timestamp } = useSelector(state => state.location);
+
   const date = getDate(timestamp);
   const time = getTime(timestamp);
 
@@ -14,4 +17,4 @@ const index = ({ timestamp }) => {
   );
 };
 
-export default index;
+export default Date;
