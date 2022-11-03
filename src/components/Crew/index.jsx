@@ -29,7 +29,6 @@ const Crew = ({ crew }) => {
     const randomArbitrary = getRandomInt(0, names.length);
     obj.photo = `${API_PHOTO}/${names[randomArbitrary]}`;
   });
-  console.log(crew);
 
   return (
     <>
