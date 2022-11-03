@@ -19,12 +19,11 @@ export const locationSlice = createSlice({
   initialState,
   reducers: {
     setLocation(state, action) {
-      state.location = action.payload;
+      state.coordinates = action.payload;
     },
   },
   extraReducers: {
     [fetchLocation.pending]: state => {
-      state.coordinates = [0, 0];
       state.status = 'loading';
     },
     [fetchLocation.fulfilled]: (state, action) => {
@@ -42,6 +41,6 @@ export const locationSlice = createSlice({
   },
 });
 
-export const { setItems } = locationSlice.actions;
+export const { setLocation } = locationSlice.actions;
 
 export default locationSlice.reducer;

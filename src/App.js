@@ -13,15 +13,15 @@ const App = () => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    // const interval = setInterval(() => {
-    //   dispatch(fetchCrew());
-    //   dispatch(fetchLocation());
-    // }, 5000);
-
-    // return () => clearInterval(interval);
     dispatch(fetchCrew());
     dispatch(fetchLocation());
-  }, []);
+    const interval = setInterval(() => {
+      dispatch(fetchCrew());
+      dispatch(fetchLocation());
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [dispatch]);
 
   return (
     <>
