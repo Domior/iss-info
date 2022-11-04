@@ -9,8 +9,8 @@ const Map = () => {
 
   return (
     <MapContainer
-      center={coordinates}
-      zoom={1}
+      center={coordinates} //sometimes lags and doesn't center the map
+      zoom={1.5}
       scrollWheelZoom={false}
       className={styles.mapContainer}
     >
