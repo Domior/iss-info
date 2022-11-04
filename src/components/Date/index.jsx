@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 
 import { getDate, getTime } from '../../utils/calculateTimestamp';
 
+import styles from './Date.module.scss';
+
 const Date = () => {
   const { timestamp } = useSelector(state => state.location);
 
@@ -10,10 +12,10 @@ const Date = () => {
   const time = getTime(timestamp);
 
   return (
-    <>
-      <div>Current UTC time: {time}</div>
-      <div>Date: {date}</div>
-    </>
+    <div className={styles.dateContainer}>
+      <p>Current UTC time: {time}</p>
+      <p>Date: {date}</p>
+    </div>
   );
 };
 

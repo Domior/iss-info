@@ -35,10 +35,8 @@ export const getDate = timestamp => {
   const month = date.getUTCMonth();
   const day = date.getUTCDate();
 
-  let dayName = daysNames[day];
-
   // dayName-day-monthName-year
-  return `${dayName}, ${day} ${monthsNames[month]} ${year}`;
+  return `${daysNames[day]}, ${day} ${monthsNames[month]} ${year}`;
 };
 
 export const getTime = timestamp => {
