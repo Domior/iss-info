@@ -28,8 +28,8 @@ export const locationSlice = createSlice({
     },
     [fetchLocation.fulfilled]: (state, action) => {
       state.coordinates = [
-        +action.payload.iss_position.longitude,
         +action.payload.iss_position.latitude,
+        +action.payload.iss_position.longitude,
       ];
       state.timestamp = action.payload.timestamp;
       state.status = 'success';

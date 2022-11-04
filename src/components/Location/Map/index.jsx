@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
 
 import { GOOGLE_MAPS_API_KEY } from '../../../constants/api';
 
@@ -21,16 +21,14 @@ const Map = () => {
   };
 
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
-      <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY}>
-        <GoogleMap mapContainerStyle={mapContainerStyle} zoom={2} center={position}>
-          <Marker
-            icon={'https://www.svgrepo.com/show/42083/satellite.svg'}
-            position={position}
-          />
-        </GoogleMap>
-      </LoadScript>
-    </div>
+    <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY}>
+      <GoogleMap mapContainerStyle={mapContainerStyle} zoom={2} center={position}>
+        <MarkerF
+          position={position}
+          icon={'http://open-notify.org/Open-Notify-API/map/ISSIcon.png'}
+        />
+      </GoogleMap>
+    </LoadScript>
 
     // <MapContainer
     //   center={coordinates}
