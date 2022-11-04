@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/iss-info/static/css/main.24e23734.css",
+    "main.js": "/iss-info/static/js/main.39bb7d76.js",
+    "index.html": "/iss-info/index.html",
+    "main.24e23734.css.map": "/iss-info/static/css/main.24e23734.css.map",
+    "main.39bb7d76.js.map": "/iss-info/static/js/main.39bb7d76.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24e23734.css",
+    "static/js/main.39bb7d76.js"
+  ]
+}
