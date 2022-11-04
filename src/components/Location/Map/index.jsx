@@ -13,12 +13,12 @@ const Map = () => {
   };
 
   return (
-    <div>
+    <>
       {selectedMap === 'google' ? <GoogleMap /> : <LeafletMap />}
       <button onClick={handleClick} className={styles.switchButton}>
         Click to switch Google Maps/Leaflet Maps
       </button>
-    </div>
+    </>
   );
 };
 
